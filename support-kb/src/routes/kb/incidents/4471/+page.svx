@@ -19,10 +19,15 @@ The export does not support the current one-cause summary. Tenant locale and boo
 ## What to track
 
 1. **Shared parser:** day-first tenant dates are read month-first. This covers app, email, and booking-v2 form reports.
-2. **Booking-v3 form:** the form displays `MM/DD/YYYY` to day-first tenants, then parses in the tenant's day-first order.
+2. **Booking-v3 form:** the form displays \`MM/DD/YYYY\` to day-first tenants, then parses in the tenant's day-first order.
 
 Classify by the tenant's configured locale and form version. The browser locale and intake tag are guesses and cross the two causes.
 
 Two GitHub issues track these causes: [shared parser (#1, 379 reports)](https://github.com/robertziolkowski/s01e03-what-it-shows/issues/1) and [booking-v3 hint (#2, 33 reports)](https://github.com/robertziolkowski/s01e03-what-it-shows/issues/2).
+
+## Engineering update · 2026-10-05
+
+- **Parser — fixed:** \`fix(dates): parse dd/mm for eu locales\`. Issue [#1](https://github.com/robertziolkowski/s01e03-what-it-shows/issues/1) is closed as done.
+- **Booking-v3 hint — won't fix:** the booking-v3 form was retired. Issue [#2](https://github.com/robertziolkowski/s01e03-what-it-shows/issues/2) is closed as not planned.
 
 <RenderStamp {signature} />
