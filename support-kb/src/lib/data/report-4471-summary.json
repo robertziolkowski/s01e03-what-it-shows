@@ -1,0 +1,28 @@
+{
+  "sourceRows": 427,
+  "uniqueReports": 412,
+  "duplicateRows": 15,
+  "ticket": 4471,
+  "causes": [
+    {
+      "id": "parser",
+      "reports": 379,
+      "tenants": 11,
+      "channels": { "app": 204, "email": 150, "form": 25 },
+      "intakeTags": { "parser": 356, "hint": 23 },
+      "firstSeen": "2026-04-01",
+      "lastSeen": "2026-10-04",
+      "oneDayMoveNotes": 5
+    },
+    {
+      "id": "hint",
+      "reports": 33,
+      "tenants": 3,
+      "channels": { "form": 33 },
+      "intakeTags": { "parser": 15, "hint": 18 },
+      "firstSeen": "2026-04-17",
+      "lastSeen": "2026-09-22",
+      "oneDayMoveNotes": 0
+    }
+  ]
+}
