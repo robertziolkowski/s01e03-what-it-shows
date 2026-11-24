@@ -1,0 +1,28 @@
+---
+layout: runbook
+title: '#4471 · two date failures'
+owner: support desk
+status: triaged
+reviewed: '2026-11-24'
+signature: 'Robert Ziółkowski'
+---
+
+<script>
+  import ReportCoverage from '#lib/kb/ReportCoverage.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+The export does not support the current one-cause summary. Tenant locale and booking form separate the merged reports into two distinct failures. The totals below use unique report IDs and were derived from the private export; report message bodies are not part of this page.
+
+<ReportCoverage />
+
+## What to track
+
+1. **Shared parser:** day-first tenant dates are read month-first. This covers app, email, and booking-v2 form reports.
+2. **Booking-v3 form:** the form displays `MM/DD/YYYY` to day-first tenants, then parses in the tenant's day-first order.
+
+Classify by the tenant's configured locale and form version. The browser locale and intake tag are guesses and cross the two causes.
+
+Two GitHub issues track these causes: [shared parser (#1, 379 reports)](https://github.com/robertziolkowski/s01e03-what-it-shows/issues/1) and [booking-v3 hint (#2, 33 reports)](https://github.com/robertziolkowski/s01e03-what-it-shows/issues/2).
+
+<RenderStamp {signature} />
